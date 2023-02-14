@@ -9,7 +9,7 @@
 /*********************************************************************/
 #define TFFCA 0x10
 #define MCZF  0x80
-#include "c:\cwHCS12\include\hcs12.h"
+#include "C:\Users\brady\Documents\Repos\MicroProcessorsSpring2023\Lab\HCS12Utilities\hcs12.h"
 
 void delayby10us(int k)
 {
