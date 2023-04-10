@@ -1,7 +1,7 @@
 //----------------------------------------------------------------------------------
-// Brady Barlow
-// Micro PreLab 7
-// 03/27/2023
+// Brady Barlow and Rebecca Petty
+// Micro Lab 7
+// 03/28/2023
 //----------------------------------------------------------------------------------
 #include "C:\Users\brady\Documents\Repos\MicroProcessorsSpring2023\Lab\HCS12Utilities\hcs12.h"
 #include "C:\Users\brady\Documents\Repos\MicroProcessorsSpring2023\Lab\HCS12Utilities\delay.h"
@@ -11,10 +11,10 @@ void main(void)
     int LeftSegment = 10, RightSegment = 10, i = 0, index = 0;
     unsigned char SegPat[11] = {0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x6F, 0x00};
     unsigned char PTA_Array[4] = {0x08, 0x04, 0x02, 0x01};
-    DDRB |= 0xFF; // configure PB pins for output
-    PTB &= 0x00;  // Port B pins set to low
-    DDRP |= 0xFF; // Configure Port P for output.
-    DDRA |= 0x0F; // Port A pins configured upper for input, and lower for output.
+    DDRB |= 0xFF;
+    PTB &= 0x00; 
+    DDRP |= 0xFF; 
+    DDRA |= 0x0F; 
     PTA &= 0x00;
 
     while (1)
@@ -31,67 +31,67 @@ void main(void)
         default:
             index++;
             break;
-        case 0x11: // button 0, display 0
+        case 0x11: // button 0
             LeftSegment = 10;
             RightSegment = 0;
             break;
-        case 0x12: // button 1, display 1
+        case 0x12: // button 1
             LeftSegment = 10;
             RightSegment = 1;
             break;
-        case 0x14: // button 2, display 2
+        case 0x14: // button 2
             LeftSegment = 10;
             RightSegment = 2;
             break;
-        case 0x18: // button 3, display 3
+        case 0x18: // button 3
             LeftSegment = 10;
             RightSegment = 3;
             break;
-        case 0x21: // button 4, display 4
+        case 0x21: // button 4
             LeftSegment = 10;
             RightSegment = 4;
             break;
-        case 0x22: // button 5, display 5
+        case 0x22: // button 5
             LeftSegment = 10;
             RightSegment = 5;
             break;
-        case 0x24: // button 6, display 6
+        case 0x24: // button 6
             LeftSegment = 10;
             RightSegment = 6;
             break;
-        case 0x28: // button 7, display 7
+        case 0x28: // button 7
             LeftSegment = 10;
             RightSegment = 7;
             break;
-        case 0x41: // button 8, display 8
+        case 0x41: // button 8
             LeftSegment = 10;
             RightSegment = 8;
             break;
-        case 0x42: // button 9, display 9
+        case 0x42: // button 9
             LeftSegment = 10;
             RightSegment = 9;
             break;
-        case 0x44: // button 10, display 10
+        case 0x44: // button 10
             LeftSegment = 1;
             RightSegment = 0;
             break;
-        case 0x48: // button 11, display 11
+        case 0x48: // button 11
             LeftSegment = 1;
             RightSegment = 1;
             break;
-        case 0x81: // button 12, display 12
+        case 0x81: // button 12
             LeftSegment = 1;
             RightSegment = 2;
             break;
-        case 0x82: // button 13, display 13
+        case 0x82: // button 13
             LeftSegment = 1;
             RightSegment = 3;
             break;
-        case 0x84: // button 14, display 14
+        case 0x84: // button 14
             LeftSegment = 1;
             RightSegment = 4;
             break;
-        case 0x88: // button 15, display 15
+        case 0x88: // button 15
             LeftSegment = 1;
             RightSegment = 5;
             break;
