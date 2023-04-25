@@ -6,8 +6,8 @@
 // initialize the LCD controller before any other function can be called.
 // Date: December 30, 2008
 // ---------------------------------------------------------------------------------
-#include "c:\cwHCS12\include\hcs12.h"
-#include "c:\cwHCS12\include\delay.h"
+#include "C:\Users\brady\Documents\Repos\MicroProcessorsSpring2023\Lab\HCS12Utilities\hcs12.h"
+#include "C:\Users\brady\Documents\Repos\MicroProcessorsSpring2023\Lab\HCS12Utilities\delay.h"
 #define  LCD_DAT  PTK       // Port K drives LCD data pins, E, and RS
 #define  LCD_DIR  DDRK      // Direction of LCD port
 #define  LCD_E    0x02      // E signal
